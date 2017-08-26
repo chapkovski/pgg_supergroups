@@ -28,12 +28,6 @@ class Constants(BaseConstants):
     multiplier = 1.8
 
 
-def slice_list(input):
-    ppg = Constants.players_per_group
-    output = [input[i:i + ppg] for i in range(0, len(input), ppg)]
-    for o in output:
-        assert len(o) == ppg, SUPERGROUP_NUM_ERR
-    return output
 
 
 def chunkify(lst, n):
